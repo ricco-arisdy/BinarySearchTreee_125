@@ -39,7 +39,24 @@ namespace BinarySearchTreee
                     Console.WriteLine("Duplicate word not allowed");
                     return;
                 }
-                
+                else //is the spesific node is note present
+                {
+                    tmp = new node(element, null, null);
+                    if(parent == null)
+                    {
+                        ROOT = tmp;
+                    }
+                    else if (string.Compare(element,parent.info) <0)
+                    {
+                        if (string.Compare(element, parent.info) < 0)
+                            parent.lchild = tmp;
+                    }
+                }
+            }
+
+            private void find(string element, ref node parent, ref node currentnode)
+            {
+                throw new NotImplementedException();
             }
         }
     }
