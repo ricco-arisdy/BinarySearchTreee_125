@@ -85,6 +85,16 @@ namespace BinarySearchTreee
                     inorder(ptr.rchild);
                 }
             }
+            public void preorder(node ptr)
+            {
+                if (ROOT != null)
+                {
+                    Console.WriteLine(ptr.info + "");
+                    preorder(ptr.lchild);
+                    preorder(ptr.rchild);
+                }
+            }
+
         }
     }
     internal class Program
