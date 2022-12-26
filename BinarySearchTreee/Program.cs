@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,6 +29,17 @@ namespace BinarySearchTreee
             public BinaryThreee()
             {
                 ROOT = null; //initializing root to null  
+            }
+            public void insert(string element) //insert a node is the binary
+            {
+                node tmp, parent = null, currentnode = null;
+                find(element, ref parent, ref currentnode);
+                if (currentnode != null)
+                {
+                    Console.WriteLine("Duplicate word not allowed");
+                    return;
+                }
+                
             }
         }
     }
