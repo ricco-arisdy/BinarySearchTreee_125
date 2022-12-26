@@ -51,12 +51,25 @@ namespace BinarySearchTreee
                         if (string.Compare(element, parent.info) < 0)
                             parent.lchild = tmp;
                     }
+                    else
+                    {
+                        parent.rchild = tmp;
+                    }
                 }
             }
 
             private void find(string element, ref node parent, ref node currentnode)
             {
-                throw new NotImplementedException();
+                currentnode = ROOT;
+                parent = null;
+                while ((currentnode != null) && (currentnode.info != null))
+                {
+                    parent = currentnode;
+                    if (string.Compare(element, parent.info) < 0)
+                        currentnode = currentnode.rchild;
+                    else
+                        currentnode = currentnode.lchild;
+                }
             }
         }
     }
